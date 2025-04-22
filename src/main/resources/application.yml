@@ -1,0 +1,16 @@
+spring:
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: deepseek-llm:7b
+  datasource:
+    url: jdbc:mysql://localhost:3306/ai_llm_rag_db
+    username: root
+    password: Password_1
+    driver: com.mysql.cj.jdbc.Driver
+  liquibase:
+    changelog: classpath:db/changelog/db.changelog-master.xml
+embedding-service:
+  url: http://localhost:8900/embed
